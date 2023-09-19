@@ -59,24 +59,24 @@ export class UsuarioApi {
   @JoinColumn({ name: 'foto_documento' })
   fotoDocumento: Foto;
 
-  @ManyToMany(
-    () => CidadesAtendidas,
-    (cidadesAtendidas) => cidadesAtendidas.usuarios,
-    {
-      nullable: true,
-      eager: true,
-    },
-  )
-  @JoinTable({ name: 'cidades_atendidas_usuarios' })
-  cidadesAtendidas: CidadesAtendidas[];
+  //   @ManyToMany(
+  //     () => CidadesAtendidas,
+  //     (cidadesAtendidas) => cidadesAtendidas.usuarios,
+  //     {
+  //       nullable: true,
+  //       eager: true,
+  //     },
+  //   )
+  //   @JoinTable({ name: 'cidades_atendidas_usuarios' })
+  //   cidadesAtendidas: CidadesAtendidas[];
 
-  @OneToOne(() => EnderecoDiarista, {
-    nullable: true,
-    eager: true,
-    onDelete: 'CASCADE',
-  })
-  @JoinColumn({ name: 'endereco_id' })
-  endereco: EnderecoDiarista;
+  //   @OneToOne(() => EnderecoDiarista, {
+  //     nullable: true,
+  //     eager: true,
+  //     onDelete: 'CASCADE',
+  //   })
+  //   @JoinColumn({ name: 'endereco_id' })
+  //   endereco: EnderecoDiarista;
 
   @CreateDateColumn({
     type: 'timestamp',
