@@ -9,7 +9,7 @@ export class TypeOrmConfigService implements TypeOrmOptionsFactory {
     return {
       database: 'ediaristas',
       username: 'root',
-      password: 'Bradesco1@',
+      password: 'root',
       host: 'localhost',
       port: 3306,
       synchronize: false,
